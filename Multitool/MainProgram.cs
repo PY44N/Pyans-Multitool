@@ -13,6 +13,7 @@ namespace Multitool
 |                                        |
 |             Pyan's Mutlitool           |
 |                                        |
+|                 (E)Exit                |
 |               (0)Changelog             |
 |                (1)IP Info              |
 |           (2)Phone Number Info         |
@@ -22,11 +23,16 @@ namespace Multitool
 ";
         public static void Run()
         {
+            Console.Clear();
             Console.Title = Global.ConsoleName;
             Console.WriteLine(Options);
             Choice = Console.ReadLine();
             Console.Clear();
-            if (Choice == "0")
+            if (Choice == "e" || Choice == "E")
+            {
+                System.Environment.Exit(0);
+            }
+            else if (Choice == "0")
             {
                 Changelog.Run();
             }
@@ -42,6 +48,7 @@ namespace Multitool
                 Base64.Run();
             }
             Console.ReadLine();
+            Run();
         }
     }
 }
