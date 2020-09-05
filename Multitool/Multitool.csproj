@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base64.cs" />
     <Compile Include="Changelog.cs" />
     <Compile Include="Download.cs" />
     <Compile Include="Global.cs" />

@@ -16,6 +16,7 @@ namespace Multitool
 |               (0)Changelog             |
 |                (1)IP Info              |
 |           (2)Phone Number Info         |
+|                 (3)Base64              |
 |                                        |
 ╚----------------------------------------╝
 ";
@@ -36,6 +37,9 @@ namespace Multitool
             else if (Choice == "2")
             {
                 PhoneNumberInfo.Run();
+            } else if (Choice == "3")
+            {
+                Base64.Run();
             }
             Console.ReadLine();
         }
