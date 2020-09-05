@@ -1,0 +1,10 @@
+C:\Users\pyan4\source\repos\Multitool\Multitool\bin\Debug\Multitool.exe.config
+C:\Users\pyan4\source\repos\Multitool\Multitool\bin\Debug\Multitool.exe
+C:\Users\pyan4\source\repos\Multitool\Multitool\bin\Debug\Multitool.pdb
+C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.csprojAssemblyReference.cache
+C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.csproj.CoreCompileInputs.cache
+C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.exe
+C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.pdb
+C:\Users\pyan4\source\repos\Multitool\Multitool\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pyan4\source\repos\Multitool\Multitool\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.csproj.CopyComplete
