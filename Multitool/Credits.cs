@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Multitool
 {
-    class Changelog
+    class Credits
     {
         public static void Run()
         {
-            Console.Title = Global.ConsoleName + " | Changelog";
-            Console.WriteLine(Global.Changelog);
+            Console.Title = Global.ConsoleName + " | Credits";
+            Console.WriteLine(Global.Credits);
         }
     }
 }

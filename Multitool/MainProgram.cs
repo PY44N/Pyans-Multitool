@@ -14,7 +14,8 @@ namespace Multitool
 |             Pyan's Mutlitool           |
 |                                        |
 |                 (E)Exit                |
-|               (0)Changelog             |
+|               (U)Updatelog             |
+|                (C)Credits              |
 |                (1)IP Info              |
 |           (2)Phone Number Info         |
 |                 (3)Base64              |
@@ -32,9 +33,13 @@ namespace Multitool
             {
                 System.Environment.Exit(0);
             }
-            else if (Choice == "0")
+            else if (Choice == "u" || Choice == "U")
             {
-                Changelog.Run();
+                Updatelog.Run();
+            }
+            else if (Choice == "c" || Choice == "C")
+            {
+                Credits.Run();
             }
             else if (Choice == "1")
             {
