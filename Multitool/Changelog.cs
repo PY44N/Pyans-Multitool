@@ -10,6 +10,7 @@ namespace Multitool
     {
         public static void Run()
         {
+            Console.Title = Global.ConsoleName + " | Changelog";
             Console.WriteLine(Global.Changelog);
         }
     }
