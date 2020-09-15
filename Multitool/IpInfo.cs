@@ -1,57 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Web;
-using System.Threading.Tasks;
-using System.Threading;
 using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using Newtonsoft.Json;
 
 namespace Multitool
 {
-    class IpInfo
+    public partial class IPInfo : Form
     {
         private static string Info;
         private static dynamic Json;
-        private static string IP;
-        private static string Choice;
-        private static string Options = @"╔----------------------------------------╗
-|                                        |
-|     Which IP do you want to use?       |
-|                                        |
-|                 (1)Yours               |
-|                 (2)Other               |
-|                                        |
-╚----------------------------------------╝
-";
-        public static void Run()
+
+        public IPInfo()
         {
-            Console.Title = Global.ConsoleName + " | IP Info";
-            Console.WriteLine(Options);
-            Choice = Console.ReadLine();
-            Console.Clear();
+            InitializeComponent();
+        }
+
+        private void IPInfo_Load(object sender, EventArgs e)
+        {
+            Text = Global.title + " | IP Info";
 
             WebClient wc = new WebClient();
-            if (Choice == "1")
-            {
-                Info = wc.DownloadString("http://ip-api.com/json/");
-            } else if (Choice == "2")
-            {
-                Console.WriteLine("What IP do you want to get info for?");
-                IP = Console.ReadLine();
-                Info = wc.DownloadString("http://ip-api.com/json/" + IP);
-                Console.Clear();
-            }
+            Info = wc.DownloadString("http://ip-api.com/json/");
+            wc.Dispose();
             Json = JsonConvert.DeserializeObject(Info);
+            IP.Text = Json.query;
+        }
 
-            Console.WriteLine("IP: " + Json.query);
-            Console.WriteLine("Country: " + Json.country);
-            Console.WriteLine("Region: " + Json.regionName);
-            Console.WriteLine("City: " + Json.city);
-            Console.WriteLine("Zip: " + Json.zip);
-            Console.WriteLine("Timezone: " + Json.timezone);
-            Console.WriteLine("ISP: " + Json.isp);
+        private void Search_Click(object sender, EventArgs e)
+        {
+            WebClient wc = new WebClient();
+            Info = wc.DownloadString("http://ip-api.com/json/" + IP.Text);
+            wc.Dispose();
+            Json = JsonConvert.DeserializeObject(Info);
+            Out.Text = "IP: " + Json.query + "\nCountry: " + Json.country + "\nRegion: " + Json.regionName + "\nCity: " + Json.city + "\nZip: " + Json.zip + "\nTimezone: " + Json.timezone + "\nISP: " + Json.isp;
         }
     }
 }

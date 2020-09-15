@@ -4,8 +4,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3EAA165A-352B-409C-8506-3DDA040EC3A3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{DD3B22FC-F208-48B6-88D3-2DE251C2F4D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Multitool</RootNamespace>
     <AssemblyName>Multitool</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -42,24 +42,93 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base64.cs" />
-    <Compile Include="Credits.cs" />
+    <Compile Include="Base64Decode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base64Decode.Designer.cs">
+      <DependentUpon>Base64Decode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base64Encode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base64Encode.Designer.cs">
+      <DependentUpon>Base64Encode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Download.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="IpInfo.cs" />
-    <Compile Include="MainProgram.cs" />
-    <Compile Include="PhoneNumberInfo.cs" />
+    <Compile Include="IPInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPInfo.Designer.cs">
+      <DependentUpon>IPInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneNumberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoneNumberInfo.Designer.cs">
+      <DependentUpon>PhoneNumberInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Updatelog.cs" />
+    <Compile Include="UpdateLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLog.Designer.cs">
+      <DependentUpon>UpdateLog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Base64Decode.resx">
+      <DependentUpon>Base64Decode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base64Encode.resx">
+      <DependentUpon>Base64Encode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPInfo.resx">
+      <DependentUpon>IPInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoneNumberInfo.resx">
+      <DependentUpon>PhoneNumberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UpdateLog.resx">
+      <DependentUpon>UpdateLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
