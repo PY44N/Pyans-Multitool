@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ namespace Multitool
     {
         public static void Run()
         {
+            //Downloads Newtonsoft.Json.Dll
             WebClient wc = new WebClient();
             wc.DownloadFile("https://github.com/PY44N/FileDownloads/raw/master/Newtonsoft.Json.dll", "Newtonsoft.Json.dll");
             wc.Dispose();
