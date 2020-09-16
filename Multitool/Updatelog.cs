@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,9 @@ namespace Multitool
 
         private void UpdateLog_Load(object sender, EventArgs e)
         {
+            //Sets form title
             Text = Global.title + " | Update Log";
+            //Sets theme
             Theme.Run(this);
         }
     }
