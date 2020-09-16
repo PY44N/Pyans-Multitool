@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,7 @@ namespace Multitool
 {
     class Global
     {
+        //Defines Form Title
         public static string title = "Pyan's Multitool v1.4";
     }
 }
