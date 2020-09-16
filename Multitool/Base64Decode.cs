@@ -19,14 +19,15 @@ namespace Multitool
 
         private void Base64Decode_Load(object sender, EventArgs e)
         {
-            //Sets form title and sets theme
+            //Sets form title
             Text = Global.title + " | Base64 Decode";
+            //Sets theme
             Theme.Run(this);
         }
 
         private void Decode_Click(object sender, EventArgs e)
         {
-            //Decodes Base64 and Sets output text to decoded base64
+            //Sets output text to decoded base64
             Out.Text = Encoding.ASCII.GetString(Convert.FromBase64String(ToDecode.Text));
         }
     }
