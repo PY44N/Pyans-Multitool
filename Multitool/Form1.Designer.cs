@@ -53,9 +53,9 @@
             this.Credits.AutoSize = true;
             this.Credits.Location = new System.Drawing.Point(107, 106);
             this.Credits.Name = "Credits";
-            this.Credits.Size = new System.Drawing.Size(87, 13);
+            this.Credits.Size = new System.Drawing.Size(90, 13);
             this.Credits.TabIndex = 1;
-            this.Credits.Text = "Multitool by Pyan";
+            this.Credits.Text = "Multitool by Pyan ";
             // 
             // Updatelog
             // 

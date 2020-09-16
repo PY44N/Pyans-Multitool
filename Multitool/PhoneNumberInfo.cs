@@ -25,6 +25,7 @@ namespace Multitool
         private void PhoneNumberInfo_Load(object sender, EventArgs e)
         {
             Text = Global.title + " | Phone Number Info";
+            Theme.Run(this);
         }
 
         private void Search_Click(object sender, EventArgs e)

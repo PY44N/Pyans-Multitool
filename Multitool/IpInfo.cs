@@ -25,6 +25,7 @@ namespace Multitool
         private void IPInfo_Load(object sender, EventArgs e)
         {
             Text = Global.title + " | IP Info";
+            Theme.Run(this);
 
             WebClient wc = new WebClient();
             Info = wc.DownloadString("http://ip-api.com/json/");

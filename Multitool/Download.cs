@@ -13,6 +13,7 @@ namespace Multitool
         {
             WebClient wc = new WebClient();
             wc.DownloadFile("https://github.com/PY44N/FileDownloads/raw/master/Newtonsoft.Json.dll", "Newtonsoft.Json.dll");
+            wc.Dispose();
         }
     }
 }

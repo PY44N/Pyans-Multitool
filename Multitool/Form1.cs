@@ -21,6 +21,7 @@ namespace Multitool
         {
             Download.Run();
             Text = Global.title;
+            Theme.Run(this);
         }
 
         private void GithubLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -57,5 +58,6 @@ namespace Multitool
             var Form = new PhoneNumberInfo();
             Form.Show();
         }
+
     }
 }

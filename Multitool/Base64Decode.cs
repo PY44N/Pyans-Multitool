@@ -20,6 +20,7 @@ namespace Multitool
         private void Base64Decode_Load(object sender, EventArgs e)
         {
             Text = Global.title + " | Base64 Decode";
+            Theme.Run(this);
         }
 
         private void Decode_Click(object sender, EventArgs e)

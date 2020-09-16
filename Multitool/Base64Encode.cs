@@ -20,6 +20,7 @@ namespace Multitool
         private void Base64Encode_Load(object sender, EventArgs e)
         {
             Text = Global.title + " | Base64 Encode";
+            Theme.Run(this);
         }
 
         private void Encode_Click(object sender, EventArgs e)

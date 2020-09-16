@@ -20,6 +20,7 @@ namespace Multitool
         private void UpdateLog_Load(object sender, EventArgs e)
         {
             Text = Global.title + " | Update Log";
+            Theme.Run(this);
         }
     }
 }
