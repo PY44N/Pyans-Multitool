@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +19,15 @@ namespace Multitool
 
         private void Base64Encode_Load(object sender, EventArgs e)
         {
+            //Sets Form Tite
             Text = Global.title + " | Base64 Encode";
+            //Sets Themes
             Theme.Run(this);
         }
 
         private void Encode_Click(object sender, EventArgs e)
         {
+            //Sets Output text to Encoded base64
             Out.Text = Convert.ToBase64String(Encoding.ASCII.GetBytes(ToEncode.Text));
         }
     }
