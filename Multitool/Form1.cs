@@ -21,6 +21,8 @@ namespace Multitool
         {
             //Downloads Needed Files
             Download.Run();
+            //Loads Themes from save
+            Theme.Load();
             //Sets form title
             Text = Global.title;
             //Sets theme
