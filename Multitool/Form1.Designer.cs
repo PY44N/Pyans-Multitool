@@ -35,6 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.Settings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GithubLink
@@ -59,7 +60,7 @@
             // 
             // Updatelog
             // 
-            this.Updatelog.Location = new System.Drawing.Point(110, 80);
+            this.Updatelog.Location = new System.Drawing.Point(74, 80);
             this.Updatelog.Name = "Updatelog";
             this.Updatelog.Size = new System.Drawing.Size(75, 23);
             this.Updatelog.TabIndex = 2;
@@ -107,11 +108,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // Settings
+            // 
+            this.Settings.Location = new System.Drawing.Point(154, 80);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(75, 23);
+            this.Settings.TabIndex = 7;
+            this.Settings.Text = "Settings";
+            this.Settings.UseVisualStyleBackColor = true;
+            this.Settings.Click += new System.EventHandler(this.Settings_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 154);
+            this.Controls.Add(this.Settings);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Settings;
     }
 }
 

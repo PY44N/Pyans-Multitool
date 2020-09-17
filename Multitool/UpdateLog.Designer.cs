@@ -37,7 +37,7 @@
             this.Log.AutoSize = true;
             this.Log.Location = new System.Drawing.Point(12, 9);
             this.Log.Name = "Log";
-            this.Log.Size = new System.Drawing.Size(373, 65);
+            this.Log.Size = new System.Drawing.Size(373, 78);
             this.Log.TabIndex = 0;
             this.Log.Text = resources.GetString("Log.Text");
             // 
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 84);
+            this.ClientSize = new System.Drawing.Size(402, 92);
             this.Controls.Add(this.Log);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

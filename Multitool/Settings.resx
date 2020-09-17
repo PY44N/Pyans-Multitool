@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Log.Text" xml:space="preserve">
-    <value>2.0: Added Custom Themes, you can find them in settings
-1.4: Reworked the whole thing so it has a UI
-1.3: Changed Changelog to Updatelog, Changed keybind to U, Added Credits
-1.2: Added Restart After Finishing and an Option to exit in the main menu
-1.1: Added Base64 Encoder and Decoder
-1.0: Release
-</value>
-  </data>
 </root>

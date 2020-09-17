@@ -16,3 +16,4 @@ C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.csproj.CopyC
 C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.Base64Decode.resources
 C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.IPInfo.resources
 C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.PhoneNumberInfo.resources
+C:\Users\pyan4\source\repos\Multitool\Multitool\obj\Debug\Multitool.Settings.resources

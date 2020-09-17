@@ -70,5 +70,11 @@ namespace Multitool
             Form.Show();
         }
 
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            //Opens settings form
+            var Form = new Settings();
+            Form.Show();
+        }
     }
 }

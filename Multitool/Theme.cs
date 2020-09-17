@@ -19,6 +19,18 @@ namespace Multitool
         public static Color Text;
         public static Color Button;
         public static Color Link;
+        public static int BackgroundR;
+        public static int BackgroundG;
+        public static int BackgroundB;
+        public static int TextR;
+        public static int TextG;
+        public static int TextB;
+        public static int ButtonR;
+        public static int ButtonG;
+        public static int ButtonB;
+        public static int LinkR;
+        public static int LinkG;
+        public static int LinkB;
 
         private static int LoadInt(StreamReader reader)
         {
@@ -123,48 +135,132 @@ namespace Multitool
                 }
             }
 
-            using (StreamReader streamReaderR = new StreamReader("Theme.BackgroundR.dll", Encoding.UTF8))
+            using (StreamReader reader = new StreamReader("Theme.BackgroundR.dll", Encoding.UTF8))
             {
-                using (StreamReader streamReaderG = new StreamReader("Theme.BackgroundG.dll", Encoding.UTF8))
-                {
-                    using (StreamReader streamReaderB = new StreamReader("Theme.BackgroundB.dll", Encoding.UTF8))
-                    {
-                        Background = Color.FromArgb(LoadInt(streamReaderR), LoadInt(streamReaderB), LoadInt(streamReaderG));
-                    }
-                }
+                BackgroundR = LoadInt(reader);
             }
 
-            using (StreamReader streamReaderR = new StreamReader("Theme.TextR.dll", Encoding.UTF8))
+            using (StreamReader reader = new StreamReader("Theme.BackgroundG.dll", Encoding.UTF8))
             {
-                using (StreamReader streamReaderG = new StreamReader("Theme.TextG.dll", Encoding.UTF8))
-                {
-                    using (StreamReader streamReaderB = new StreamReader("Theme.TextB.dll", Encoding.UTF8))
-                    {
-                        Text = Color.FromArgb(LoadInt(streamReaderR), LoadInt(streamReaderB), LoadInt(streamReaderG));
-                    }
-                }
+                BackgroundG = LoadInt(reader);
             }
 
-            using (StreamReader streamReaderR = new StreamReader("Theme.ButtonR.dll", Encoding.UTF8))
+            using (StreamReader reader = new StreamReader("Theme.BackgroundB.dll", Encoding.UTF8))
             {
-                using (StreamReader streamReaderG = new StreamReader("Theme.ButtonG.dll", Encoding.UTF8))
-                {
-                    using (StreamReader streamReaderB = new StreamReader("Theme.ButtonB.dll", Encoding.UTF8))
-                    {
-                        Button = Color.FromArgb(LoadInt(streamReaderR), LoadInt(streamReaderB), LoadInt(streamReaderG));
-                    }
-                }
+                BackgroundB = LoadInt(reader);
             }
 
-            using (StreamReader streamReaderR = new StreamReader("Theme.LinkR.dll", Encoding.UTF8))
+            using (StreamReader reader = new StreamReader("Theme.TextR.dll", Encoding.UTF8))
             {
-                using (StreamReader streamReaderG = new StreamReader("Theme.LinkR.dll", Encoding.UTF8))
-                {
-                    using (StreamReader streamReaderB = new StreamReader("Theme.LinkR.dll", Encoding.UTF8))
-                    {
-                        Link = Color.FromArgb(LoadInt(streamReaderR), LoadInt(streamReaderB), LoadInt(streamReaderG));
-                    }
-                }
+                TextR = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.TextG.dll", Encoding.UTF8))
+            {
+                TextG = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.TextB.dll", Encoding.UTF8))
+            {
+                TextB = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.ButtonR.dll", Encoding.UTF8))
+            {
+                ButtonR = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.ButtonG.dll", Encoding.UTF8))
+            {
+                ButtonG = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.ButtonB.dll", Encoding.UTF8))
+            {
+                ButtonB = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.LinkR.dll", Encoding.UTF8))
+            {
+                LinkR = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.LinkG.dll", Encoding.UTF8))
+            {
+                LinkG = LoadInt(reader);
+            }
+
+            using (StreamReader reader = new StreamReader("Theme.LinkB.dll", Encoding.UTF8))
+            {
+                LinkB = LoadInt(reader);
+            }
+
+            Background = Color.FromArgb(BackgroundR, BackgroundG, BackgroundB);
+            Text = Color.FromArgb(TextR, TextG, TextB);
+            Button = Color.FromArgb(ButtonR, ButtonG, ButtonB);
+            Link = Color.FromArgb(LinkR, LinkG, LinkB);
+        }
+
+        public static void Set(string BackgroundR, string BackgroundG, string BackgroundB, string TextR, string TextG, string TextB, string ButtonR, string ButtonB, string ButtonG, string LinkR, string LinkB, string LinkG)
+        {
+            using (StreamWriter writer = new StreamWriter("Theme.BackgroundR.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(BackgroundR)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.BackgroundG.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(BackgroundG)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.BackgroundB.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(BackgroundB)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.TextR.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(TextR)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.TextG.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(TextG)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.TextB.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(TextB)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.ButtonR.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(ButtonR)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.ButtonG.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(ButtonG)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.ButtonB.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(ButtonB)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.LinkR.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(LinkR)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.LinkG.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(LinkG)));
+            }
+
+            using (StreamWriter writer = new StreamWriter("Theme.LinkB.dll"))
+            {
+                writer.WriteLine(Convert.ToBase64String(Encoding.ASCII.GetBytes(LinkB)));
             }
         }
 

@@ -9,6 +9,6 @@ namespace Multitool
     class Global
     {
         //Defines Form Title
-        public static string title = "Pyan's Multitool v1.4";
+        public static string title = "Pyan's Multitool v2.0";
     }
 }
