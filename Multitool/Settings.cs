@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,6 +43,20 @@ namespace Multitool
         private void Save_Click(object sender, EventArgs e)
         {
             Theme.Set(BackR.Text, BackG.Text, BackB.Text, TextR.Text, TextG.Text, TextB.Text, ButtonR.Text, ButtonB.Text, ButtonG.Text, LinkR.Text, LinkB.Text, LinkG.Text);
+
+            var notification = new NotifyIcon()
+            {
+                Visible = true,
+                Icon = SystemIcons.Information,
+                BalloonTipTitle = "Pyan's Multitool",
+                BalloonTipText = "Saved theme, please restart the program to apply",
+            };
+
+            notification.ShowBalloonTip(5000);
+
+            Thread.Sleep(10000);
+
+            notification.Dispose();
         }
     }
 }
